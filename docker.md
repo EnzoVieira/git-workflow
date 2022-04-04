@@ -22,7 +22,7 @@ docker build -t example .
 
 ### Remove Container
 ```sh
-docker rm [CONTAINER_ID]
+docker rm [CONTAINER_ID/CONTAINER_NAME]
 ```
 
 ### Run Container
@@ -43,9 +43,34 @@ like:
 docker exec -it example /bin/bash
 ```
 
+### Container Logs
+Last logs:
+```sh
+docker logs [CONTAINER_NAME]
+```
+Keep watching:
+```sh
+docker logs [CONTAINER_NAME] -f
+```
+
 ## Docker compose
 
 ### Run Docker Compose
 ```sh
 docker-compose up
+```
+
+or run docker compose on background
+```sh
+docker-compose up -d
+```
+
+### Stop Docker Compose
+```sh
+docker-compose stop
+```
+
+### Stop and Remove Docker Compose Containers
+```sh
+docker-compose down
 ```
